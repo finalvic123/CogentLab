@@ -15,7 +15,7 @@ const MapComponent:React.FC<Props> = ({location}) => {
 		lng: location.longitude,
 	}
 	return (
-		<LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_API || ''}>
+		<LoadScript data-cy="googleMap" googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_API || ''}>
 			<GoogleMap 
 				mapContainerStyle={{width: '100%', height: '300px'}}
 				center={companyLocation}

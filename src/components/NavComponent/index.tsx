@@ -113,6 +113,7 @@ const NavComponent:React.FC<Props> = ({setDetailInfo, detailInfo}) => {
             variant="h6"
             noWrap
             component={"div"}
+            data-cy="title"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
               Restaurant Search
           </Typography>
@@ -121,6 +122,7 @@ const NavComponent:React.FC<Props> = ({setDetailInfo, detailInfo}) => {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase 
+              data-cy="search-input"
               inputRef={searchRef}
               onKeyDown={searchRestaurant}
               placeholder="Search..."
@@ -146,7 +148,7 @@ const NavComponent:React.FC<Props> = ({setDetailInfo, detailInfo}) => {
                     'https://as2.ftcdn.net/v2/jpg/04/70/29/97/1000_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg'
                     } />
                 </ListItemAvatar>
-                <ListItemText primary={randomData.name} secondary={randomData.location.address} />
+                <ListItemText data-cy="recomendRestaurant" primary={randomData.name} secondary={randomData.location.address} />
               </ListItem>
             </React.Suspense>
           </>

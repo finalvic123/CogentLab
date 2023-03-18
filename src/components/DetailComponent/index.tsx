@@ -63,7 +63,7 @@ const DetailComponent:React.FC<Props> = ({detailInfo}) => {
         <>
           <MapComponent location={detailInfo?.geocodes.main} />
           <Box sx={{padding: '30px'}}>
-            <Typography variant="h5">
+            <Typography data-cy="name" variant="h5">
               {`${detailInfo.name}`}
             </Typography>
             {detailInfo.rating && 
