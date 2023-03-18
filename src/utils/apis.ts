@@ -6,8 +6,8 @@ import { companyLocation } from "../constants/location";
 const foursquareAPI = process.env.REACT_APP_FOURSQUARE_API;
 const foursquareAPIClientId = process.env.REACT_APP_FOURSQUARE_API_CLIENT_ID;
 const foursquareAPIClientSecret = process.env.REACT_APP_FOURSQUARE_API_CLIENT_SECRET;
-const categoryId = process.env.REACT_APP_GOOGLE_MAP_CATEGORY_ID;
-const authorization = process.env.REACT_APP_GOOGLE_MAP_AUTHORIZATION;
+const categoryId = process.env.REACT_APP_FOURSQUARE_API_CATEGORY_ID;
+const authorization = process.env.REACT_APP_FOURSQUARE_API_AUTHORIZATION;
 
 const credential = {
   v: '20171001',
