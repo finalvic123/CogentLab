@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Box } from '@mui/material'
-import { NavComponent } from "../../components";
+import { NavComponent, DetailComponent } from "../../components";
 import { DetailCard } from "../../models";
 
 const HomePage = () => {
@@ -11,6 +11,9 @@ const HomePage = () => {
       <NavComponent 
         setDetailInfo={setDetailInfo} 
         detailInfo={detailInfo} />
+      <DetailComponent 
+        detailInfo={detailInfo}
+      />
     </Box>
   )
 }
