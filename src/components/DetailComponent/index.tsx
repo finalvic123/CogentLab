@@ -12,6 +12,7 @@ import {
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css"
 import { DetailCard } from "../../models";
+import MapComponent from "../MapComponent";
 
 type Props = {
   detailInfo?: DetailCard
@@ -60,6 +61,7 @@ const DetailComponent:React.FC<Props> = ({detailInfo}) => {
     <Box sx={{ width: '70%', height: '100vh', overflow: 'scroll' }}>
       {detailInfo && 
         <>
+          <MapComponent location={detailInfo?.geocodes.main} />
           <Box sx={{padding: '30px'}}>
             <Typography variant="h5">
               {`${detailInfo.name}`}

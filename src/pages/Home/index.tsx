@@ -7,7 +7,7 @@ const HomePage = () => {
   const [detailInfo, setDetailInfo] = useState<DetailCard>()
 
   return (
-    <Box>
+    <Box  sx={{ display: 'flex' }}>
       <NavComponent 
         setDetailInfo={setDetailInfo} 
         detailInfo={detailInfo} />
