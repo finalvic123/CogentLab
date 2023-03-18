@@ -94,13 +94,14 @@ const NavComponent:React.FC<Props> = ({setDetailInfo, detailInfo}) => {
       const {results} = list && list;
       const result = results && results[Math.floor(Math.random() * results.length)];
       const detailData = await detailSearch(result.fsq_id);
-      setRandomData(result)
-      setDetailInfo(detailData)
+      setRandomData(result);
+      setDetailInfo(detailData);
     }
   }
-
+  
   const selectRestaurant = async (id: string) => {
     const data = await detailSearch(id);
+    setDetailInfo(data);
   }
 
   useEffect(() => {randomGetData("")}, []);
@@ -161,7 +162,7 @@ const NavComponent:React.FC<Props> = ({setDetailInfo, detailInfo}) => {
                   Search Result...
                 </ListSubheader>
               )}
-              <ListItem onClick={() => selectRestaurant(data.fsq_id)} button selected={detailInfo?.fsq_id === data.fsq_id && true}>
+              <ListItem data-cy={index==0 && "display-listitem"} onClick={() => selectRestaurant(data.fsq_id)} button selected={detailInfo?.fsq_id === data.fsq_id && true}>
                 <ListItemAvatar>
                   <Avatar alt="image" src={ 
                     data.photos.length ? 

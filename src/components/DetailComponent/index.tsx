@@ -25,16 +25,16 @@ type ImageArr = {
   key: number
 }
 
-const Address = styled('div')(({ theme }) => ({
+const Address = styled('div')(() => ({
   marginTop: "10px",
   fontSize: "15px"
 }));  
-const Hours = styled('div')(({ theme }) => ({
+const Hours = styled('div')(() => ({
   marginTop: "10px",
   fontSize: "15px"
 }));
 
-const Tel = styled('div')(({ theme }) => ({
+const Tel = styled('div')(() => ({
   marginTop: "10px",
   fontSize: "15px"
 }));
@@ -68,20 +68,20 @@ const DetailComponent:React.FC<Props> = ({detailInfo}) => {
             </Typography>
             {detailInfo.rating && 
             <Box>
-              <Rating name="read-only" value={detailInfo.rating/2} readOnly />
+              <Rating data-cy="restaurant-rating" name="read-only" value={detailInfo.rating/2} readOnly />
             </Box>}
             {detailInfo.website && 
-            <Link href={detailInfo.website} variant="body2">
+            <Link data-cy="restaurant-website" href={detailInfo.website} variant="body2">
               {`${detailInfo.website}`}
             </Link>}
-            <Address>
+            <Address data-cy="restaurant-address">
               <span>Address: </span>
               {detailInfo.location.address ? detailInfo.location.address : "No Address"}
             </Address>
-            <Hours>
+            <Hours data-cy="restaurant-working-time">
               { detailInfo.hours.display ? `${detailInfo.hours.display}` : "No Opening Hours"}
             </Hours>
-            <Tel>
+            <Tel data-cy="restaurant-tel">
               {detailInfo.tel ? `${detailInfo.tel}` : "No tel number"}
             </Tel>
             <Box sx={{ width: '100%', }}>
