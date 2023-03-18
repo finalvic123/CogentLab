@@ -35,7 +35,7 @@ const listSearch = async (query: string) => {
 	+ `${queryString.stringify(params)}&${queryString.stringify(credential)}`;
 
   try {
-    const result = await axios.get(url, options).then((response) => {response.data})
+    const result:any = await axios.get(url, options).then((response) => response.data)
     return result;
   } catch (error) {
     console.log(error)
@@ -49,7 +49,7 @@ const detailSearch = async (id:string) => {
     + `${id}?fields=fsq_id,name,website,stats,geocodes,popularity,tips,tastes,features,rating,location,photos,hours,tel&${queryString.stringify(credential)}`;
   
   try {
-    const result = await axios.get(url, options).then((response) => response.data)
+    const result:any = await axios.get(url, options).then((response) => response.data)
     return result;
   } catch(error) {
     console.log(error)
