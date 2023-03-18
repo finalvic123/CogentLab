@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Restaurant Finder App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem Description
 
-## Available Scripts
+The employees at Cogent Labs in Roppongi need help in finding nearby restaurants for lunch. They also want to be able to search for restaurants by keywords and view restaurant details such as menu, pictures, and reviews. The goal of this project is to create a web application that will help employees find restaurants in the area and provide them with enough information to make an informed decision.
 
-In the project directory, you can run:
+## Solution
 
-### `yarn start`
+The Restaurant Finder App is a web application built using React. It utilizes the Foursquare Places API to provide restaurant data. The application allows users to randomly select a restaurant within 1km of the Cogent Labs office, search for restaurants by keyword, view a map with restaurant locations, and view restaurant details such as menu, pictures, and reviews.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technical Choices
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+React: The application is built using React for its ease of use and reusability. React components are easy to test and can be easily modified to meet changing requirements.
 
-### `yarn test`
+React Router: React Router is used for routing within the application. It helps in rendering the appropriate components based on the current URL.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Foursquare Places API: The application utilizes the Foursquare Places API to provide restaurant data. Foursquare is a reliable source for restaurant data and provides a wide range of information.
 
-### `yarn build`
+Google Map: Google Map is used for displaying a map with restaurant locations. It is a widely used library for integrating maps with React applications.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Styled Components: Styled Components are used for styling the application. It helps in writing modular and maintainable CSS.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Trade-offs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Responsive Design: The application is currently optimized for desktop devices. Additional effort would be required to make it responsive for mobile devices.
 
-### `yarn eject`
+Testing: Although the application has been tested, additional testing could be done to ensure the application is robust and error-free.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Data Persistence: The application does not currently support data persistence. If the user refreshes the page, they will lose their search results.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Improvements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Authentication: Implementing user authentication would allow users to save their favorite restaurants and preferences.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Recommendations: Implementing a recommendation engine would provide personalized restaurant recommendations based on user preferences and history.
 
-## Learn More
+Mobile Support: Optimizing the application for mobile devices would make it more accessible and user-friendly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Conclusion
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Restaurant Finder App is a React-based web application that allows users to find nearby restaurants and view detailed information about them. The application utilizes the Foursquare Places API to provide accurate and up-to-date restaurant data. With further improvements, the application can be a valuable tool for employees at Cogent Labs in Roppongi to find and discover new restaurants in the area.
