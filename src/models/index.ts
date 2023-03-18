@@ -1,8 +1,7 @@
-import { type } from "os"
-import Card from "./Card.models"
-import DetailCard from "./DetailCard.models";
+import type Card from "./Card.models"
+import type DetailCard from "./DetailCard.models";
 
-export type {
+export {
   Card,
   DetailCard
 }
